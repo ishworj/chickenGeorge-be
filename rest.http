@@ -1,15 +1,17 @@
-### GET request to fetch all tasks
-GET http://localhost:8080/api/v1/products
-Content-Type: application/json
+
 
 ### POST request to create a subscriber
 POST http://localhost:8080/api/v1/suscribers
 Content-Type: application/json
 
-{
+{ 
     "email": "ishwor.karki@example.com"
 }
-###
+
+### Get request to get all suscribers
+GET http://localhost:8080/api/v1/suscribers
+
+### To register users
 POST   http://localhost:8080/api/v1/users/register
 Content-Type: application/json
 
@@ -19,7 +21,7 @@ Content-Type: application/json
     "password":"1234"
 }
 
-###
+### to login user
 POST   http://localhost:8080/api/v1/users/login
 Content-Type: application/json
 
@@ -27,4 +29,37 @@ Content-Type: application/json
     "email":"iisssdsssssdsddsdf@gmail.com",
     "password":"1234"
 }
+
+### to create products
+POST  http://localhost:8080/api/v1/products
+Content-Type: application/json
+
+{
+    "name":"rissoles",
+    "description":"thi si s a rissoles ",
+    "calorie":500,
+    "price":400,
+    "category":"rawChicken"
+
+}
+
+### to get all products
+GET  http://localhost:8080/api/v1/products
+
+### to update a product
+PUT  http://localhost:8080/api/v1/products/67a32be8bad44687eb693dbe
+Content-Type: application/json
+
+{
+    "name":"rissole",
+    "description":"thi si s a rissoles ",
+    "calorie":500,
+    "price":400,
+    "category":"rawChicken"
+
+}
+
+
+### to delete a product
+DELETE  http://localhost:8080/api/v1/products/67a32be8bad44687eb693dbe
 
