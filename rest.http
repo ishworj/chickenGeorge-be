@@ -63,3 +63,24 @@ Content-Type: application/json
 ### to delete a product
 DELETE  http://localhost:8080/api/v1/products/67a32be8bad44687eb693dbe
 
+
+
+### to add item in a cart
+POST  http://localhost:8080/api/v1/cart
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlpc3NzZHNzc3NzZHNkZHNkZkBnbWFpbC5jb20iLCJpYXQiOjE3Mzg5OTk4NTgsImV4cCI6MTczOTA4NjI1OH0.BzKZqde5Mu2j536s8HeZ38ZHkayTCe5_PIhgZBFKqcE
+
+{
+    "productId":"6788cc8f9a56c45f3896ce09",
+    "quantity":3
+}
+
+### to add item in a cart
+PUT   http://localhost:8080/api/v1/cart
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlpc3NzZHNzc3NzZHNkZHNkZkBnbWFpbC5jb20iLCJpYXQiOjE3Mzg5OTk4NTgsImV4cCI6MTczOTA4NjI1OH0.BzKZqde5Mu2j536s8HeZ38ZHkayTCe5_PIhgZBFKqcE
+
+{
+    "productId":"6788cc8f9a56c45f3896ce09",
+    "quantity":2
+}

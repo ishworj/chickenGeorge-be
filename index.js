@@ -4,7 +4,8 @@ import bodyParser from "body-parser";
 import { connectDB } from "./config/mongodbConnection.js";
 import UserRouter from "./routes/userRoute.js";
 import SuscriberRouter from "./routes/suscriberRoute.js";
-import ProductRouter from "./routes/productRoute.js"
+import ProductRouter from "./routes/productRoute.js";
+import CartRouter from "./routes/cartRoute.js";
 
 const app = express();
 app.use(cors());
@@ -20,4 +21,5 @@ connectDB();
 
 app.use("/api/v1/users", UserRouter);
 app.use("/api/v1/suscribers", SuscriberRouter);
-app.use("/api/v1/products",ProductRouter)
+app.use("/api/v1/products",ProductRouter);
+app.use("/api/v1/cart" , CartRouter);
